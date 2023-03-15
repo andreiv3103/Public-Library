@@ -183,39 +183,7 @@ Try {
 
         ## Remove all existing AIP client instances.
 
-        # Get all existing app instances.
-        $AppInstances = Get-InstalledApplication -Name 'Azure Information Protection'
-        # Uninstall each app instance.
-        foreach ($App in $AppInstances) {
-            Write-Log "Removing application '$($App.DisplayName)'."
-            if ($App.UninstallString -like "*MsiExec.exe*") {
-                $CmdletParams = @{
-                    Action          = 'Uninstall'
-                    Path            = $App.UninstallSubKey
-                    ContinueOnError = $true
-                    Verbose         = $true
-                }
-                Execute-MSI @CmdletParams
-            }
-            else {
-                $UninstallStringParts = ($App.UninstallString -split ('.exe')).Trim('"')
-                $UninstallerPath = $UninstallStringParts[0] + '.exe'
-                if ([string]::IsNullOrWhiteSpace($UninstallStringParts[1])) {
-                    $ArgumentList = '/S'
-                }
-                else {
-                    $ArgumentList = ($UninstallStringParts[1] + ' /S').Trim(' ')
-                }
-                $CmdletParams = @{
-                    Path            = $UninstallerPath
-                    Parameters      = $ArgumentList
-                    WindowStyle     = 'Hidden'
-                    ContinueOnError = $true
-                    Verbose         = $true
-                }
-                Execute-Process @CmdletParams
-            }
-        }
+        Uninstall-AllAipInstances
 
         ##*===============================================
         ##* INSTALLATION
@@ -258,7 +226,7 @@ Try {
         ##*===============================================
         [String]$installPhase = 'Uninstallation'
 
-        ## <Perform Uninstallation tasks here>
+        Uninstall-AllAipInstances
 
         ##*===============================================
         ##* POST-UNINSTALLATION
