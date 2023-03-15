@@ -262,7 +262,7 @@ try {
             }
             Write-Log "Start-Process parameters:`n$(($CmdletParams | Out-String).Trim())"
             $ExecStatus = Start-Process @CmdletParams
-            if ($ExecStatus.ExitCode -notin (3010, 0, 1641)) {
+            if ($ExecStatus.ExitCode -notin (0, 1641, 3010)) {
                 Write-Log "Application successfully removed."
             }
             else {
@@ -286,7 +286,7 @@ try {
             }
             Write-Log "Start-Process parameters:`n$(($CmdletParams | Out-String).Trim())"
             $ExecStatus = Start-Process @CmdletParams
-            if ($ExecStatus.ExitCode -notin (3010, 0, 1641)) {
+            if ($ExecStatus.ExitCode -notin (0, 1641, 3010)) {
                 Write-Log "Application successfully removed."
             }
             else {
