@@ -8,5 +8,5 @@
 * Replace the `Deploy-Application.ps1` file from there with the one in this repo. That is the main script file.
 * Replace `AppDeployToolkit\AppDeployToolkitExtensions.ps1` with the file from this repo. This file contains the custom uninstall function.
 * In the `Files` subfolder from the `Toolkit` folder, copy the AIP Client installer MSI (It can be downloaded from [here](https://www.microsoft.com/en-us/download/details.aspx?id=53018)). Please make sure you downloaded the MSI version and NOT the EXE version.
-* Now use the contents of the 'Toolkit' folder to create an SCCM application package.
+* Now use the contents of the `Toolkit` folder to create an SCCM application package.
 * For a detailed training on how to use PSADT with SCCM, please go through this series of YouTube videos: https://www.youtube.com/watch?v=J6V67Mpolqc

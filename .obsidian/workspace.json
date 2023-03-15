@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9a95514779ba56b0",
+        "id": "6650736fdbd21a68",
         "type": "tabs",
         "children": [
           {
-            "id": "c7d18ab272d9202c",
+            "id": "6846ecdd1d2f0fa6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,7 +139,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7d18ab272d9202c",
+  "active": "6846ecdd1d2f0fa6",
   "lastOpenFiles": [
     "App Management Scripts/PSADT/Install or Upgrade AIP Client/ReadMe.md",
     "App Management Scripts/PSADT/ReadMe.md"
