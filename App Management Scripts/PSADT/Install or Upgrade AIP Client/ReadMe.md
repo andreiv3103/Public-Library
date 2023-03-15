@@ -1,4 +1,4 @@
-# Upgrade the AIP Client
+# Install or Upgrade the AIP Client
 * This is the main script that needs to be used in the PowerShell App Deploy Toolkit solution to create an AIP Client upgrade package.
 * The solution is going to uninstall any existing AIP client installations and install the version from the package.
 ## How to use
