@@ -1,5 +1,5 @@
 # Install or Upgrade the AIP Client
-* This is the main script that needs to be used in the PowerShell App Deploy Toolkit solution to create an AIP Client upgrade package.
+* This folder contains the files that need to be updated in the PSADT standard package, to create an AIP Client install or upgrade package.
 * The solution is going to uninstall any existing AIP client installations and install the version from the package.
 ## How to use
 * Download Powershell App Deploy Toolkit (from [here](https://github.com/andreiv3103/Misc/blob/2ff649a481a61d4b03d945e94514a68b7983ab82/App%20Management%20Scripts/Other/Uninstall%20AIP%20Client/Uninstall%20AIP%20Client.ps1))
