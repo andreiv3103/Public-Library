@@ -1,0 +1,28 @@
+# Folders filters.
+[Ll]og/
+[Ll]ogs/
+CollectedLogs/
+[Oo]utput/
+[Oo]ut/
+[Bb]ackup/
+[Dd]ata/
+[Mm]nt/
+[Bb]uild/
+.obsidian/
+
+# File type filters.
+~*.*
+*.log
+*.wim
+*.iso
+*.msu
+*.msi
+
+# Other filters.
+MECM/Create New Application/sources/Files/*
+MECM/Create New Application/sources/SupportFiles/*
+MECM/Create New Application/AppPkgConfigData.json
+
+# Other filters.
+#
+#
