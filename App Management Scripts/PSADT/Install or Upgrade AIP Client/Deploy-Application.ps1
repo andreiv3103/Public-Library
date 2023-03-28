@@ -190,7 +190,7 @@ Try {
         New-PSDrive -PSProvider 'registry' -Root 'HKEY_CLASSES_ROOT' -Name 'HKCR' | Out-Null
         Set-Location 'HKCR:' | Out-Null
         $MsiCode = (Get-ItemProperty 'Installer\Products\*' |
-            Where-Object { $_.ProductName -eq 'Microsoft Azure Information Protection' }).PackageCode
+            Where-Object { $_.ProductName -eq 'Microsoft Azure Information Protection' }).PSChildName
         if (!([string]::IsNullOrWhiteSpace($MsiCode))) {
             reg.exe delete "HKCR\Installer\Products\$MsiCode" /f
         }
@@ -244,7 +244,7 @@ Try {
         New-PSDrive -PSProvider 'registry' -Root 'HKEY_CLASSES_ROOT' -Name 'HKCR' | Out-Null
         Set-Location 'HKCR:' | Out-Null
         $MsiCode = (Get-ItemProperty 'Installer\Products\*' |
-            Where-Object { $_.ProductName -eq 'Microsoft Azure Information Protection' }).PackageCode
+            Where-Object { $_.ProductName -eq 'Microsoft Azure Information Protection' }).PSChildName
         if (!([string]::IsNullOrWhiteSpace($MsiCode))) {
             reg.exe delete "HKCR\Installer\Products\$MsiCode" /f
         }
