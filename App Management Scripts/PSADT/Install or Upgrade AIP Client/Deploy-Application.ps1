@@ -184,6 +184,17 @@ Try {
         ## Remove all existing AIP client instances.
 
         Uninstall-AllAipInstances
+        # Remove the app installer registry key. This causes issues sometimes with the client reinstall.
+        Write-Log -Severity 1 -Message 'Removing the client installer registry key.'
+        Push-Location
+        New-PSDrive -PSProvider 'registry' -Root 'HKEY_CLASSES_ROOT' -Name 'HKCR' | Out-Null
+        Set-Location 'HKCR:' | Out-Null
+        $MsiCode = (Get-ItemProperty 'Installer\Products\*' |
+            Where-Object { $_.ProductName -eq 'Microsoft Azure Information Protection' }).PackageCode
+        if (!([string]::IsNullOrWhiteSpace($MsiCode))) {
+            reg.exe delete "HKCR\Installer\Products\$MsiCode" /f
+        }
+        Pop-Location
 
         ##*===============================================
         ##* INSTALLATION
