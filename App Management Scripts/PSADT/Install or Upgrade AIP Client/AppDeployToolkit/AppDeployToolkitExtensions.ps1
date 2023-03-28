@@ -61,7 +61,7 @@ Param (
 
 function Uninstall-AllAipInstances {
     # Get all existing app instances.
-    $AppInstances = Get-InstalledApplication -Name 'Azure Information Protection'
+    $AppInstances = Get-InstalledApplication -Name $appName
     # Uninstall each app instance.
     foreach ($App in $AppInstances) {
         Write-Log "Removing application '$($App.DisplayName)'."
@@ -93,6 +93,19 @@ function Uninstall-AllAipInstances {
             Execute-Process @CmdletParams
         }
     }
+    # Remove the app installer registry key. This causes issues sometimes with the client reinstall.
+    $null = Push-Location
+    $null = New-PSDrive -PSProvider 'registry' -Root 'HKEY_CLASSES_ROOT' -Name 'HKCR'
+    $null = Set-Location 'HKCR:'
+    [array]$TargetRegKeys = (Get-ItemProperty 'Installer\Products\*' |
+        Where-Object { $_.ProductName -match $appName })
+    foreach ($Item in $TargetRegKeys) {
+        $CurrentKeyPath = $Item.PsPath -replace ('^.*::', '')
+        Write-Log "Removing the client installer registry key '$CurrentKeyPath' for product '$($Item.ProductName)'."
+        [array]$CommandOutput = reg.exe delete "$CurrentKeyPath" /f
+        if ($CommandOutput.Count -gt 0) { Write-Log $(($CommandOutput | Out-String).Trim()) }
+    }
+    $null = Pop-Location
 }
 
 ##*===============================================
