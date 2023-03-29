@@ -99,6 +99,12 @@ function Uninstall-AllAipInstances {
     $null = Set-Location 'HKCR:'
     [array]$TargetRegKeys = (Get-ItemProperty 'Installer\Products\*' |
         Where-Object { $_.ProductName -match $appName })
+    if ($TargetRegKeys.Count -gt 0) {
+        Write-Log "Registry keys related to the app found. Proceeding to remove."
+    }
+    else {
+        Write-Log "No registry keys found. Nothing to delete" -Severity 2
+    }
     foreach ($Item in $TargetRegKeys) {
         $CurrentKeyPath = $Item.PsPath -replace ('^.*::', '')
         Write-Log "Removing the client installer registry key '$CurrentKeyPath' for product '$($Item.ProductName)'."
