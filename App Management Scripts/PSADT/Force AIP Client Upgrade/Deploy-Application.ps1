@@ -236,6 +236,7 @@ Try {
         [String]$installPhase = 'Post-Uninstallation'
 
         ## <Perform Post-Uninstallation tasks here>
+        Remove-RegistryKey -Key $PkgRegPath
 
     }
     ElseIf ($deploymentType -ieq 'Repair') {
