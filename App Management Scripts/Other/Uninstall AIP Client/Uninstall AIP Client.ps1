@@ -295,17 +295,14 @@ try {
             }
         }
     }
-    # Remove the app installer registry key. This causes issues sometimes with the client reinstall.
+    # Remove the app installer registry key, if they were left over from the uninstall. This causes issues sometimes with the client reinstall.
     $null = Push-Location
     $null = New-PSDrive -PSProvider 'registry' -Root 'HKEY_CLASSES_ROOT' -Name 'HKCR'
     $null = Set-Location 'HKCR:'
     [array]$TargetRegKeys = (Get-ItemProperty 'Installer\Products\*' |
         Where-Object { $_.ProductName -match $appName })
     if ($TargetRegKeys.Count -gt 0) {
-        Write-Log "Registry keys related to the app found. Proceeding to remove."
-    }
-    else {
-        Write-Log "No registry keys found. Nothing to delete." -Severity 2
+        Write-Log "Leftover registry keys related to the app found. Proceeding to remove." -Severity 2
     }
     foreach ($Item in $TargetRegKeys) {
         $CurrentKeyPath = $Item.PsPath -replace ('^.*::', '')
