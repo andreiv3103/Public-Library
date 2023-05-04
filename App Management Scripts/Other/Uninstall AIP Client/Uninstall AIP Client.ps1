@@ -305,7 +305,7 @@ try {
         Write-Log "Registry keys related to the app found. Proceeding to remove."
     }
     else {
-        Write-Log "No registry keys found. Nothing to delete" -Severity 2
+        Write-Log "No registry keys found. Nothing to delete." -Severity 2
     }
     foreach ($Item in $TargetRegKeys) {
         $CurrentKeyPath = $Item.PsPath -replace ('^.*::', '')
