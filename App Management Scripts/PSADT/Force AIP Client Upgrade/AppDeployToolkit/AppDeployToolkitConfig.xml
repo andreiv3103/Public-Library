@@ -321,7 +321,6 @@
         <WelcomePrompt_CountdownMessage>Le {0} va continuer automatiquement:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>Installation</DeploymentType_Install>
         <DeploymentType_UnInstall>Désinstallation</DeploymentType_UnInstall>
         <DeploymentType_Repair>Réparation</DeploymentType_Repair>
@@ -409,7 +408,6 @@
         <WelcomePrompt_CountdownMessage>Il {0} continuerà automaticamente in:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>Installazione</DeploymentType_Install>
         <DeploymentType_UnInstall>Disinstallazione</DeploymentType_UnInstall>
         <DeploymentType_Repair>Riparazione</DeploymentType_Repair>
@@ -453,7 +451,6 @@
         <DeferPrompt_Deadline>デッドライン:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>{0} は自動的に続きます:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>インストール</DeploymentType_Install>
         <DeploymentType_UnInstall>アンインストール</DeploymentType_UnInstall>
@@ -499,7 +496,6 @@
         <WelcomePrompt_CountdownMessage>{0} vil automatisk fortsette i:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>Installasjon</DeploymentType_Install>
         <DeploymentType_UnInstall>Avinstallasjon</DeploymentType_UnInstall>
         <DeploymentType_Repair>Reparasjon</DeploymentType_Repair>
@@ -544,7 +540,6 @@
         <DeferPrompt_Deadline>Deadline:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>De {0} gaat automatisch door over:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Installatie</DeploymentType_Install>
         <DeploymentType_UnInstall>Verwijderen</DeploymentType_UnInstall>
@@ -633,7 +628,6 @@
         <DeferPrompt_Deadline>Prazo:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>O {0} continuará automaticamente em:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Instalação</DeploymentType_Install>
         <DeploymentType_UnInstall>Desinstalação</DeploymentType_UnInstall>
@@ -813,7 +807,6 @@
         <WelcomePrompt_CountdownMessage>سيستمر {0} تلقائيا في:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>تثبيت</DeploymentType_Install>
         <DeploymentType_UnInstall>إزالة التثبيت</DeploymentType_UnInstall>
         <DeploymentType_Repair>إصلاح</DeploymentType_Repair>
@@ -857,7 +850,6 @@
         <DeferPrompt_Deadline>תאריך יעד:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>ה {0} ימשיך באופן אוטומטי:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>התקנה</DeploymentType_Install>
         <DeploymentType_UnInstall>הסרה</DeploymentType_UnInstall>
@@ -903,7 +895,6 @@
         <WelcomePrompt_CountdownMessage>{0}는 자동으로 계속됩니다:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>설치</DeploymentType_Install>
         <DeploymentType_UnInstall>제거</DeploymentType_UnInstall>
         <DeploymentType_Repair>수리</DeploymentType_Repair>
@@ -946,7 +937,6 @@
         <DeferPrompt_Deadline>Дата истечения:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>{0} автоматически продолжится через:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Установка</DeploymentType_Install>
         <DeploymentType_UnInstall>Удаление</DeploymentType_UnInstall>
@@ -992,7 +982,6 @@
         <WelcomePrompt_CountdownMessage>{0}会自动继续:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>安装</DeploymentType_Install>
         <DeploymentType_UnInstall>卸载</DeploymentType_UnInstall>
         <DeploymentType_Repair>修复</DeploymentType_Repair>
@@ -1036,7 +1025,6 @@
         <DeferPrompt_Deadline>最後期限：</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>{0}會自動繼續:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>安裝</DeploymentType_Install>
         <DeploymentType_UnInstall>卸載</DeploymentType_UnInstall>
@@ -1082,7 +1070,6 @@
         <WelcomePrompt_CountdownMessage>{0} bude automaticky pokračovať za:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
 
-
         <DeploymentType_Install>Inštalácia</DeploymentType_Install>
         <DeploymentType_UnInstall>Odinštalácia</DeploymentType_UnInstall>
         <DeploymentType_Repair>Oprava</DeploymentType_Repair>
@@ -1124,7 +1111,6 @@
         <DeferPrompt_Deadline>Termín:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>{0} bude automaticky pokračovat za:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Instalace</DeploymentType_Install>
         <DeploymentType_UnInstall>Odinstalace</DeploymentType_UnInstall>
@@ -1168,7 +1154,6 @@
         <DeferPrompt_Deadline>Időpont:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>A(z) {0} automatikusan folytatódik:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Telepítés</DeploymentType_Install>
         <DeploymentType_UnInstall>Eltávolítás</DeploymentType_UnInstall>
@@ -1214,7 +1199,6 @@
         <DeferPrompt_Deadline>Määräaika:</DeferPrompt_Deadline>
         <WelcomePrompt_CountdownMessage>{0} jatkaa automaattisesti:</WelcomePrompt_CountdownMessage>
         <WelcomePrompt_CustomMessage></WelcomePrompt_CustomMessage>
-
 
         <DeploymentType_Install>Asennus</DeploymentType_Install>
         <DeploymentType_UnInstall>Ohjelmiston poisto</DeploymentType_UnInstall>

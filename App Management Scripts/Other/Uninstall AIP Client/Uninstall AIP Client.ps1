@@ -1,4 +1,4 @@
-﻿#Requires -Version 5
+﻿
 #Requires -RunAsAdministrator
 
 #Region ===============================[Metadata]==============================
