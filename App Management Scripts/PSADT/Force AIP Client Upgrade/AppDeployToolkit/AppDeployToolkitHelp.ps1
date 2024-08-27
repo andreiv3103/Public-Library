@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 
 PSApppDeployToolkit - Displays a graphical console to browse the help for the App Deployment Toolkit functions.
@@ -38,7 +38,6 @@ This script does not generate any output.
 
 https://psappdeploytoolkit.com
 #>
-
 
 ##*===============================================
 ##* VARIABLE DECLARATION

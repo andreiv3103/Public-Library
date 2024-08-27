@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 
 PSAppDeployToolkit - This script contains the PSADT core runtime and functions using by a Deploy-Application.ps1 script.
@@ -66,7 +66,6 @@ The other parameters specified for this script that are not documented in this h
 
 https://psappdeploytoolkit.com
 #>
-
 
 [CmdletBinding()]
 Param (
@@ -898,7 +897,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Execute-MSP
 Function Execute-MSP {
     <#
@@ -1437,7 +1435,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Remove-InvalidFileNameChars
 Function Remove-InvalidFileNameChars {
     <#
@@ -1503,7 +1500,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function New-ZipFile
 Function New-ZipFile {
@@ -1724,7 +1720,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Exit-Script
 Function Exit-Script {
     <#
@@ -1905,7 +1900,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Resolve-Error
 Function Resolve-Error {
@@ -2153,7 +2147,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Show-InstallationPrompt
 Function Show-InstallationPrompt {
     <#
@@ -2312,7 +2305,6 @@ https://psappdeploytoolkit.com
             $installPromptParameters.Remove('NoWait')
             # Format the parameters as a string
             [String]$installPromptParameters = ($installPromptParameters.GetEnumerator() | Resolve-Parameters) -join ' '
-
 
             Start-Process -FilePath "$PSHOME\powershell.exe" -ArgumentList "-ExecutionPolicy Bypass -NoProfile -NoLogo -WindowStyle Hidden -Command & {& `'$scriptPath`' -ReferredInstallTitle `'$Title`' -ReferredInstallName `'$installName`' -ReferredLogName `'$logName`' -ShowInstallationPrompt $installPromptParameters -AsyncToolkitLaunch}" -WindowStyle 'Hidden' -ErrorAction 'SilentlyContinue'
             Return
@@ -2611,7 +2603,6 @@ https://psappdeploytoolkit.com
         [String]$installPromptLoggedParameters = ($installPromptParameters.GetEnumerator() | Resolve-Parameters) -join ' '
         Write-Log -Message "Displaying custom installation prompt with the parameters: [$installPromptLoggedParameters]." -Source ${CmdletName}
 
-
         ## Show the prompt synchronously. If user cancels, then keep showing it until user responds using one of the buttons.
         $showDialog = $true
         While ($showDialog) {
@@ -2655,7 +2646,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Show-DialogBox
 Function Show-DialogBox {
@@ -2846,7 +2836,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-HardwarePlatform
 Function Get-HardwarePlatform {
     <#
@@ -2948,7 +2937,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-FreeDiskSpace
 Function Get-FreeDiskSpace {
     <#
@@ -3026,7 +3014,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-InstalledApplication
 Function Get-InstalledApplication {
@@ -3170,7 +3157,6 @@ https://psappdeploytoolkit.com
                 [String]$appDisplayVersion = ($regKeyApp | Select-Object -ExpandProperty DisplayVersion -ErrorAction SilentlyContinue) -replace '[^\p{L}\p{Nd}\p{Z}\p{P}]', ''
                 [String]$appPublisher = ($regKeyApp | Select-Object -ExpandProperty Publisher -ErrorAction SilentlyContinue) -replace '[^\p{L}\p{Nd}\p{Z}\p{P}]', ''
 
-
                 ## Determine if application is a 64-bit application
                 [Boolean]$Is64BitApp = If (($is64Bit) -and ($regKeyApp.PSPath -notmatch '^Microsoft\.PowerShell\.Core\\Registry::HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node')) {
                     $true
@@ -3283,7 +3269,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Execute-MSI
 Function Execute-MSI {
@@ -3774,7 +3759,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Remove-MSIApplications
 Function Remove-MSIApplications {
     <#
@@ -4119,7 +4103,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Execute-Process
 Function Execute-Process {
@@ -4657,7 +4640,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-MsiExitCodeMessage
 Function Get-MsiExitCodeMessage {
     <#
@@ -4728,7 +4710,6 @@ Returns the message for the MSI error code.
     }
 }
 #endregion
-
 
 #region Function Test-IsMutexAvailable
 Function Test-IsMutexAvailable {
@@ -4890,7 +4871,6 @@ This is an internal script function and should typically not be called directly.
 }
 #endregion
 
-
 #region Function New-Folder
 Function New-Folder {
     <#
@@ -4969,7 +4949,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Remove-Folder
 Function Remove-Folder {
@@ -5104,7 +5083,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Copy-File
 Function Copy-File {
@@ -5410,7 +5388,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Remove-File
 Function Remove-File {
     <#
@@ -5558,7 +5535,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Copy-FileToUserProfiles
 function Copy-FileToUserProfiles {
@@ -5734,7 +5710,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Remove-FileFromUserProfiles
 Function Remove-FileFromUserProfiles {
     <#
@@ -5868,7 +5843,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Convert-RegistryPath
 Function Convert-RegistryPath {
@@ -6016,7 +5990,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Test-RegistryValue
 Function Test-RegistryValue {
     <#
@@ -6127,7 +6100,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-RegistryKey
 Function Get-RegistryKey {
@@ -6343,7 +6315,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Set-RegistryKey
 Function Set-RegistryKey {
     <#
@@ -6533,7 +6504,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Remove-RegistryKey
 Function Remove-RegistryKey {
     <#
@@ -6692,7 +6662,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Invoke-HKCURegistrySettingsForAllUsers
 Function Invoke-HKCURegistrySettingsForAllUsers {
     <#
@@ -6833,7 +6802,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function ConvertTo-NTAccountOrSID
 Function ConvertTo-NTAccountOrSID {
@@ -7008,7 +6976,6 @@ http://msdn.microsoft.com/en-us/library/system.security.principal.wellknownsidty
 }
 #endregion
 
-
 #region Function Get-UserProfiles
 Function Get-UserProfiles {
     <#
@@ -7157,7 +7124,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-FileVersion
 Function Get-FileVersion {
     <#
@@ -7263,7 +7229,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function New-Shortcut
 Function New-Shortcut {
@@ -8379,7 +8344,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Update-Desktop
 Function Update-Desktop {
     <#
@@ -8447,7 +8411,6 @@ https://psappdeploytoolkit.com
 }
 Set-Alias -Name 'Refresh-Desktop' -Value 'Update-Desktop' -Scope 'Script' -Force -ErrorAction 'SilentlyContinue'
 #endregion
-
 
 #region Function Update-SessionEnvironmentVariables
 Function Update-SessionEnvironmentVariables {
@@ -8548,7 +8511,6 @@ https://psappdeploytoolkit.com
 }
 Set-Alias -Name 'Refresh-SessionEnvironmentVariables' -Value 'Update-SessionEnvironmentVariables' -Scope 'Script' -Force -ErrorAction 'SilentlyContinue'
 #endregion
-
 
 #region Function Get-SchedulerTask
 Function Get-SchedulerTask {
@@ -8669,7 +8631,6 @@ If (-not (Get-Command -Name 'Get-ScheduledTask' -ErrorAction 'SilentlyContinue')
     New-Alias -Name 'Get-ScheduledTask' -Value 'Get-SchedulerTask'
 }
 #endregion
-
 
 #region Function Block-AppExecution
 Function Block-AppExecution {
@@ -8869,7 +8830,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Unblock-AppExecution
 Function Unblock-AppExecution {
     <#
@@ -8967,7 +8927,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-DeferHistory
 Function Get-DeferHistory {
     <#
@@ -9029,7 +8988,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Set-DeferHistory
 Function Set-DeferHistory {
@@ -9100,7 +9058,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-UniversalDate
 Function Get-UniversalDate {
@@ -9192,7 +9149,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-RunningProcesses
 Function Get-RunningProcesses {
@@ -9306,7 +9262,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Show-InstallationWelcome
 Function Show-InstallationWelcome {
@@ -9906,7 +9861,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Show-WelcomePrompt
 Function Show-WelcomePrompt {
@@ -10632,7 +10586,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Show-InstallationRestartPrompt
 Function Show-InstallationRestartPrompt {
     <#
@@ -11077,7 +11030,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Show-BalloonTip
 Function Show-BalloonTip {
     <#
@@ -11343,7 +11295,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Show-InstallationProgress
 Function Show-InstallationProgress {
@@ -11688,7 +11639,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Close-InstallationProgress
 Function Close-InstallationProgress {
     <#
@@ -11816,7 +11766,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Set-PinnedApplication
 Function Set-PinnedApplication {
@@ -12050,7 +11999,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-IniValue
 Function Get-IniValue {
     <#
@@ -12146,7 +12094,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Set-IniValue
 Function Set-IniValue {
@@ -12248,7 +12195,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-PEFileArchitecture
 Function Get-PEFileArchitecture {
@@ -12376,7 +12322,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Invoke-RegisterOrUnregisterDLL
 Function Invoke-RegisterOrUnregisterDLL {
@@ -12542,7 +12487,6 @@ Set-Alias -Name 'Register-DLL' -Value 'Invoke-RegisterOrUnregisterDLL' -Scope 'S
 Set-Alias -Name 'Unregister-DLL' -Value 'Invoke-RegisterOrUnregisterDLL' -Scope 'Script' -Force -ErrorAction 'SilentlyContinue'
 #endregion
 
-
 #region Function Invoke-ObjectMethod
 Function Invoke-ObjectMethod {
     <#
@@ -12637,7 +12581,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-ObjectProperty
 Function Get-ObjectProperty {
     <#
@@ -12707,7 +12650,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-MsiTableProperty
 Function Get-MsiTableProperty {
@@ -12954,7 +12896,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Set-MsiProperty
 Function Set-MsiProperty {
     <#
@@ -13078,7 +13019,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function New-MsiTransform
 Function New-MsiTransform {
@@ -13290,7 +13230,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Test-MSUpdates
 Function Test-MSUpdates {
     <#
@@ -13440,7 +13379,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Install-MSUpdates
 Function Install-MSUpdates {
     <#
@@ -13548,7 +13486,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-WindowTitle
 Function Get-WindowTitle {
@@ -13697,7 +13634,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Send-Keys
 Function Send-Keys {
@@ -13864,7 +13800,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Test-Battery
 Function Test-Battery {
@@ -14033,7 +13968,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Test-NetworkConnection
 Function Test-NetworkConnection {
     <#
@@ -14096,7 +14030,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Test-PowerPoint
 Function Test-PowerPoint {
@@ -14221,7 +14154,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Invoke-SCCMTask
 Function Invoke-SCCMTask {
@@ -14379,7 +14311,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Install-SCCMSoftwareUpdates
 Function Install-SCCMSoftwareUpdates {
     <#
@@ -14528,7 +14459,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Update-GroupPolicy
 Function Update-GroupPolicy {
     <#
@@ -14617,7 +14547,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Enable-TerminalServerInstallMode
 Function Enable-TerminalServerInstallMode {
     <#
@@ -14689,7 +14618,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Disable-TerminalServerInstallMode
 Function Disable-TerminalServerInstallMode {
     <#
@@ -14760,7 +14688,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Set-ActiveSetup
 Function Set-ActiveSetup {
@@ -15238,7 +15165,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Test-ServiceExists
 Function Test-ServiceExists {
     <#
@@ -15354,7 +15280,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Stop-ServiceAndDependencies
 Function Stop-ServiceAndDependencies {
@@ -15523,7 +15448,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Start-ServiceAndDependencies
 Function Start-ServiceAndDependencies {
@@ -15694,7 +15618,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-ServiceStartMode
 Function Get-ServiceStartMode {
     <#
@@ -15793,7 +15716,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Set-ServiceStartMode
 Function Set-ServiceStartMode {
@@ -15908,7 +15830,6 @@ https://psappdeploytoolkit.com
 }
 #endregion
 
-
 #region Function Get-LoggedOnUser
 Function Get-LoggedOnUser {
     <#
@@ -15993,7 +15914,6 @@ https://psappdeploytoolkit.com
     }
 }
 #endregion
-
 
 #region Function Get-PendingReboot
 Function Get-PendingReboot {

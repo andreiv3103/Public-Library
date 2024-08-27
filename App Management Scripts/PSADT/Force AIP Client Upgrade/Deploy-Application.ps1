@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 
 PSApppDeployToolkit - This script performs the installation or uninstallation of an application(s).
@@ -78,7 +78,6 @@ Toolkit Exit Code Ranges:
 https://psappdeploytoolkit.com
 #>
 
-
 [CmdletBinding()]
 Param (
     [Parameter(Mandatory = $false)]
@@ -121,7 +120,6 @@ Try {
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [String]$installName = ''
     [String]$installTitle = ''
-
 
     ##* Do not modify section below
     #region DoNotModify

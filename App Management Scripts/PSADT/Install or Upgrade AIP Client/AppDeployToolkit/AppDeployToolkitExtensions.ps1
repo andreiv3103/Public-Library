@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 
 PSAppDeployToolkit - Provides the ability to extend and customise the toolkit by adding your own functions that can be re-used.
@@ -38,7 +38,6 @@ This script does not generate any output.
 
 https://psappdeploytoolkit.com
 #>
-
 
 [CmdletBinding()]
 Param (
